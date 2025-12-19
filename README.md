@@ -5,7 +5,7 @@ Ein kryptographisch sicherer Passwort-Generator mit mehreren Voreinstellungen un
 ## Installation
 
 ```bash
-npm install @yourusername/secure-password-generator
+npm install @flexthecoder/secure-password-generator
 ```
 
 ## Features
@@ -22,7 +22,7 @@ npm install @yourusername/secure-password-generator
 ### Einfaches Beispiel
 
 ```javascript
-import { generatePassword, generateDefaultPassword } from '@yourusername/secure-password-generator'
+import { generatePassword, generateDefaultPassword } from '@flexthecoder/secure-password-generator'
 
 // Standard-Passwort (12 Zeichen, alle Zeichentypen)
 const password = generateDefaultPassword()
@@ -32,7 +32,7 @@ console.log(password) // z.B. "aB3!xK9@mP2q"
 ### Benutzerdefiniertes Passwort
 
 ```javascript
-import { generatePassword } from '@yourusername/secure-password-generator'
+import { generatePassword } from '@flexthecoder/secure-password-generator'
 
 const customPassword = generatePassword({
   length: 16,
@@ -47,7 +47,7 @@ console.log(customPassword) // z.B. "aBcDeF123456GhIj"
 ### Einfaches Passwort (ohne Symbole)
 
 ```javascript
-import { generateSimplePassword } from '@yourusername/secure-password-generator'
+import { generateSimplePassword } from '@flexthecoder/secure-password-generator'
 
 const simplePassword = generateSimplePassword(10)
 console.log(simplePassword) // z.B. "Abc123XyZ9"
@@ -56,7 +56,7 @@ console.log(simplePassword) // z.B. "Abc123XyZ9"
 ### PIN-Code generieren
 
 ```javascript
-import { generatePIN } from '@yourusername/secure-password-generator'
+import { generatePIN } from '@flexthecoder/secure-password-generator'
 
 const pin = generatePIN(6)
 console.log(pin) // z.B. "847293"
@@ -65,7 +65,7 @@ console.log(pin) // z.B. "847293"
 ### Hochsicheres Passwort
 
 ```javascript
-import { generateSecurePassword } from '@yourusername/secure-password-generator'
+import { generateSecurePassword } from '@flexthecoder/secure-password-generator'
 
 const securePassword = generateSecurePassword(32)
 console.log(securePassword) // z.B. "aB3!xK9@mP2q#L5$nR8%sT1^vW4&"
@@ -183,5 +183,5 @@ Beiträge sind willkommen! Bitte öffne ein Issue oder einen Pull Request auf Gi
 
 ## Support
 
-Bei Fragen oder Problemen öffne bitte ein Issue auf GitHub: [https://github.com/yourusername/secure-password-generator/issues](https://github.com/yourusername/secure-password-generator/issues)
+Bei Fragen oder Problemen öffne bitte ein Issue auf GitHub: [https://github.com/flexthecoder/secure-password-generator/issues](https://github.com/flexthecoder/secure-password-generator/issues)
 

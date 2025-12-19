@@ -21,14 +21,17 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/secure-password-generator.git"
+    "url": "https://github.com/FleXtheCoder/keygen_libary"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/secure-password-generator/issues"
+    "url": "https://github.com/FleXtheCoder/keygen_libary/issues"
   },
-  "homepage": "https://github.com/yourusername/secure-password-generator#readme",
+  "homepage": "https://github.com/FleXtheCoder/keygen_libary#readme",
   "engines": {
     "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "index.js",
