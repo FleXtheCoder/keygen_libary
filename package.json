@@ -1,0 +1,40 @@
+{
+  "name": "@flexthecoder/keygen",
+  "version": "1.0.0",
+  "description": "A cryptographically secure password generator with multiple presets and customizable options",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "password",
+    "generator",
+    "secure",
+    "random",
+    "password-generator",
+    "keygen",
+    "pin",
+    "cryptography"
+  ],
+  "author": "Royalski",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/secure-password-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/secure-password-generator/issues"
+  },
+  "homepage": "https://github.com/yourusername/secure-password-generator#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "keygen.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
+
