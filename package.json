@@ -1,6 +1,6 @@
 {
   "name": "@flexthecoder/keygen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cryptographically secure password generator with multiple presets and customizable options",
   "main": "index.js",
   "type": "module",
@@ -40,4 +40,3 @@
     "LICENSE"
   ]
 }
-
