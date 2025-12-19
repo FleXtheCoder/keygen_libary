@@ -1,38 +1,38 @@
 # Secure Password Generator
 
-Ein kryptographisch sicherer Passwort-Generator mit mehreren Voreinstellungen und anpassbaren Optionen.
+A cryptographically secure password generator with multiple presets and customizable options.
 
 ## Installation
 
 ```bash
-npm install @flexthecoder/secure-password-generator
+npm install @flexthecoder/keygen
 ```
 
 ## Features
 
-- ✅ Mehrere vorgefertigte Funktionen für verschiedene Anwendungsfälle
-- ✅ Vollständig anpassbare Optionen
-- ✅ Keine externen Abhängigkeiten
-- ✅ TypeScript-freundlich
-- ✅ ES-Module-Unterstützung
-- ✅ Leichtgewichtig und schnell
+- ✅ Multiple pre-built functions for different use cases
+- ✅ Fully customizable options
+- ✅ No external dependencies
+- ✅ TypeScript-friendly
+- ✅ ES Module support
+- ✅ Lightweight and fast
 
-## Verwendung
+## Usage
 
-### Einfaches Beispiel
+### Simple Example
 
 ```javascript
-import { generatePassword, generateDefaultPassword } from '@flexthecoder/secure-password-generator'
+import { generatePassword, generateDefaultPassword } from '@flexthecoder/keygen'
 
-// Standard-Passwort (12 Zeichen, alle Zeichentypen)
+// Default password (12 characters, all character types)
 const password = generateDefaultPassword()
-console.log(password) // z.B. "aB3!xK9@mP2q"
+console.log(password) // e.g. "aB3!xK9@mP2q"
 ```
 
-### Benutzerdefiniertes Passwort
+### Custom Password
 
 ```javascript
-import { generatePassword } from '@flexthecoder/secure-password-generator'
+import { generatePassword } from '@flexthecoder/keygen'
 
 const customPassword = generatePassword({
   length: 16,
@@ -41,56 +41,56 @@ const customPassword = generatePassword({
   includeNumbers: true,
   includeSymbols: false
 })
-console.log(customPassword) // z.B. "aBcDeF123456GhIj"
+console.log(customPassword) // e.g. "aBcDeF123456GhIj"
 ```
 
-### Einfaches Passwort (ohne Symbole)
+### Simple Password (without symbols)
 
 ```javascript
-import { generateSimplePassword } from '@flexthecoder/secure-password-generator'
+import { generateSimplePassword } from '@flexthecoder/keygen'
 
 const simplePassword = generateSimplePassword(10)
-console.log(simplePassword) // z.B. "Abc123XyZ9"
+console.log(simplePassword) // e.g. "Abc123XyZ9"
 ```
 
-### PIN-Code generieren
+### Generate PIN Code
 
 ```javascript
-import { generatePIN } from '@flexthecoder/secure-password-generator'
+import { generatePIN } from '@flexthecoder/keygen'
 
 const pin = generatePIN(6)
-console.log(pin) // z.B. "847293"
+console.log(pin) // e.g. "847293"
 ```
 
-### Hochsicheres Passwort
+### Highly Secure Password
 
 ```javascript
-import { generateSecurePassword } from '@flexthecoder/secure-password-generator'
+import { generateSecurePassword } from '@flexthecoder/keygen'
 
 const securePassword = generateSecurePassword(32)
-console.log(securePassword) // z.B. "aB3!xK9@mP2q#L5$nR8%sT1^vW4&"
+console.log(securePassword) // e.g. "aB3!xK9@mP2q#L5$nR8%sT1^vW4&"
 ```
 
 ## API
 
 ### `generatePassword(options)`
 
-Generiert ein sicheres zufälliges Passwort basierend auf den angegebenen Optionen.
+Generates a secure random password based on the specified options.
 
-**Parameter:**
+**Parameters:**
 
-- `options` (Object, optional): Konfigurationsoptionen
-  - `length` (number): Länge des Passworts (Standard: 12)
-  - `includeUppercase` (boolean): Großbuchstaben A-Z einbeziehen (Standard: true)
-  - `includeLowercase` (boolean): Kleinbuchstaben a-z einbeziehen (Standard: true)
-  - `includeNumbers` (boolean): Zahlen 0-9 einbeziehen (Standard: true)
-  - `includeSymbols` (boolean): Sonderzeichen einbeziehen (Standard: true)
+- `options` (Object, optional): Configuration options
+  - `length` (number): Length of the password (default: 12)
+  - `includeUppercase` (boolean): Include uppercase letters A-Z (default: true)
+  - `includeLowercase` (boolean): Include lowercase letters a-z (default: true)
+  - `includeNumbers` (boolean): Include numbers 0-9 (default: true)
+  - `includeSymbols` (boolean): Include special characters (default: true)
 
-**Rückgabewert:** `string` - Das generierte Passwort
+**Returns:** `string` - The generated password
 
-**Wirft:** `Error` wenn keine Zeichensätze ausgewählt sind
+**Throws:** `Error` if no character sets are selected
 
-**Beispiel:**
+**Example:**
 
 ```javascript
 const password = generatePassword({
@@ -104,11 +104,11 @@ const password = generatePassword({
 
 ### `generateDefaultPassword()`
 
-Generiert ein Passwort mit Standardeinstellungen (alle Zeichentypen, Länge 12).
+Generates a password with default settings (all character types, length 12).
 
-**Rückgabewert:** `string` - Das generierte Passwort
+**Returns:** `string` - The generated password
 
-**Beispiel:**
+**Example:**
 
 ```javascript
 const password = generateDefaultPassword()
@@ -116,15 +116,15 @@ const password = generateDefaultPassword()
 
 ### `generateSimplePassword(length)`
 
-Generiert ein einfaches Passwort (nur Buchstaben und Zahlen, keine Symbole).
+Generates a simple password (letters and numbers only, no symbols).
 
-**Parameter:**
+**Parameters:**
 
-- `length` (number, optional): Länge des Passworts (Standard: 12)
+- `length` (number, optional): Length of the password (default: 12)
 
-**Rückgabewert:** `string` - Das generierte Passwort
+**Returns:** `string` - The generated password
 
-**Beispiel:**
+**Example:**
 
 ```javascript
 const password = generateSimplePassword(15)
@@ -132,15 +132,15 @@ const password = generateSimplePassword(15)
 
 ### `generatePIN(length)`
 
-Generiert einen PIN-Code (nur Zahlen).
+Generates a PIN code (numbers only).
 
-**Parameter:**
+**Parameters:**
 
-- `length` (number, optional): Länge der PIN (Standard: 6)
+- `length` (number, optional): Length of the PIN (default: 6)
 
-**Rückgabewert:** `string` - Die generierte PIN
+**Returns:** `string` - The generated PIN
 
-**Beispiel:**
+**Example:**
 
 ```javascript
 const pin = generatePIN(4)
@@ -148,40 +148,40 @@ const pin = generatePIN(4)
 
 ### `generateSecurePassword(length)`
 
-Generiert ein hochsicheres Passwort mit allen Zeichentypen.
+Generates a highly secure password with all character types.
 
-**Parameter:**
+**Parameters:**
 
-- `length` (number, optional): Länge des Passworts (Standard: 24)
+- `length` (number, optional): Length of the password (default: 24)
 
-**Rückgabewert:** `string` - Das generierte Passwort
+**Returns:** `string` - The generated password
 
-**Beispiel:**
+**Example:**
 
 ```javascript
 const password = generateSecurePassword(32)
 ```
 
-## Verwendete Zeichensätze
+## Character Sets Used
 
-- **Kleinbuchstaben:** a-z (26 Zeichen)
-- **Großbuchstaben:** A-Z (26 Zeichen)
-- **Zahlen:** 0-9 (10 Zeichen)
-- **Symbole:** `!@#$%^&*()_+-=[]{}|;:,.<>?` (30 Zeichen)
+- **Lowercase letters:** a-z (26 characters)
+- **Uppercase letters:** A-Z (26 characters)
+- **Numbers:** 0-9 (10 characters)
+- **Symbols:** `!@#$%^&*()_+-=[]{}|;:,.<>?` (30 characters)
 
-## Sicherheitshinweise
+## Security Notes
 
-Diese Bibliothek verwendet `Math.random()` zur Passwortgenerierung. Für produktive Anwendungen mit höchsten Sicherheitsanforderungen solltest du in Betracht ziehen, `crypto.getRandomValues()` (Browser) oder `crypto.randomBytes()` (Node.js) zu verwenden.
+This library uses `Math.random()` for password generation. For production applications with the highest security requirements, you should consider using `crypto.getRandomValues()` (Browser) or `crypto.randomBytes()` (Node.js).
 
-## Lizenz
+## License
 
 MIT
 
-## Beitragen
+## Contributing
 
-Beiträge sind willkommen! Bitte öffne ein Issue oder einen Pull Request auf GitHub.
+Contributions are welcome! Please open an issue or pull request on GitHub.
 
 ## Support
 
-Bei Fragen oder Problemen öffne bitte ein Issue auf GitHub: [https://github.com/flexthecoder/secure-password-generator/issues](https://github.com/flexthecoder/secure-password-generator/issues)
+For questions or problems, please open an issue on GitHub: [https://github.com/flexthecoder/keygen/issues](https://github.com/flexthecoder/keygen/issues)
 
